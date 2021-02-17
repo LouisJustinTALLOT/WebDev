@@ -1,0 +1,22 @@
+<body class="media">
+    It is often very useful to tweak the print layout, in terms of margins and
+    the like.
+    <hr />
+    Click above to open in a separate window, and pretend to print so you get a
+    preview;
+</body>
+<style>
+    /* our body tag has a media class
+     * with this trick the order now won't matter */
+    body {
+        font-family: Trebuchet MS;
+    }
+
+    @media print {
+        body.media {
+            font-family: Papyrus;
+            font-size: 50px;
+            margin-left: 3cm;
+        }
+    }
+</style>
