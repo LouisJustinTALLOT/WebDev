@@ -1,0 +1,22 @@
+<body>
+    Click above to open in a separate window, turn on devel tools to see the
+    window size, and resize the window so the width becomes smaller or larger
+    than 500px <br /><b>NOTE:</b> make sure your zoom factor is 100%
+</body>
+
+<style>
+    /* beware that this rule MUST COME FIRST */
+
+    body {
+        background-color: #fae3d9; /* light pink */
+    }
+
+    /* applies if the browser window width
+           is less than 500px */
+
+    @media only screen and (max-width: 500px) {
+        html > body {
+            background-color: #bbded6; /* light green */
+        }
+    }
+</style>
