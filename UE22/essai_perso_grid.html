@@ -1,0 +1,44 @@
+<div id="container">
+    <div id="rouge">Du texte en rouge</div>
+    <div id="violet">Du texte en violet</div>
+    <div id="vert">Du texte en vert</div>
+    <div id="bleu">Du texte en bleu</div>
+    <div id="bordeaux">Le texte en bas</div>
+</div>
+
+<style>
+    #container {
+        display: grid;
+        grid-template-columns: 30% 50% 20%;
+        grid-template-areas:
+            "du_rouge du_rouge zone_violette"
+            ". zone_verte zone_violette"
+            ". . zone_violette"
+            "bleu bleu bleu"
+            "bleu bleu bleu"
+            "bordeaux bordeaux bordeaux";
+        height: 100%;
+    }
+
+    #rouge {
+        grid-area: du_rouge;
+        background-color: red;
+    }
+
+    #violet {
+        grid-area: zone_violette;
+        background-color: blueviolet;
+    }
+    #vert {
+        grid-area: zone_verte;
+        background-color: green;
+    }
+    #bleu {
+        grid-area: bleu;
+        background-color: blue;
+    }
+    #bordeaux {
+        grid-area: bordeaux;
+        background-color: brown;
+    }
+</style>
