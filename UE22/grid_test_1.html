@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="item-a">
+        the header
+        <div>blabla</div>
+    </div>
+    <div class="item-b">
+        main area
+        <div>blabla</div>
+        <div>blabla</div>
+    </div>
+    <div class="item-c">
+        side bar
+        <div>blabla</div>
+    </div>
+    <div class="item-d">
+        a footer
+        <div>blabla</div>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: grid;
+        /*  grid-template-columns: 
+      1fr 1fr 1fr 1fr;*/
+        grid-template-areas:
+            "header header header header"
+            "main   main   .      sidebar"
+            "footer footer footer sidebar";
+    }
+
+    .item-a {
+        grid-area: header;
+        background-color: #ffba5a;
+    }
+    .item-b {
+        grid-area: main;
+        background-color: #3282b8;
+    }
+    .item-c {
+        grid-area: sidebar;
+        background-color: #db3056;
+    }
+    .item-d {
+        grid-area: footer;
+        background-color: #7fa998;
+    }
+</style>
