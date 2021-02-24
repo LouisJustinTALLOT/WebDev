@@ -1,0 +1,55 @@
+<!-- the toggle() function
+ is defined in JavaScript -->
+
+<div id="button" onclick="toggle()">
+    this area acts as a button<br />
+    click to hide or show next item
+</div>
+
+<div id="area">
+    This area can be turned on or off
+    <br />
+    Check console output in the devel tools area
+</div>
+
+<style>
+    /* only cosmetic stuff in here */
+
+    #button {
+        padding: 20px;
+        border: 1px solid blue;
+        border-radius: 5px;
+        background-color: #ffb6b9;
+        width: fit-content;
+    }
+
+    #area {
+        padding: 10px;
+        background-color: #f5f0e3;
+    }
+</style>
+
+<script>
+    // we will see in the next notebook
+    // how to load javascript code
+
+    function toggle() {
+        // from the 'document' global variable
+        // locate the element that we want to toggle
+        let to_toggle = document.getElementById("area");
+
+        // find its current status
+        let current_display = to_toggle.style.display;
+        console.log('current display : ', current_display)
+
+        // apply the opposite status
+        if (current_display == "none") {
+            to_toggle.style.display = "block";
+        } else {
+            to_toggle.style.display = "none";
+        }
+
+        // show a message in the JS console
+        console.log(`display is now ${to_toggle.style.display}`);
+    }
+</script>
