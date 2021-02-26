@@ -1,4 +1,4 @@
-let failure_toggle = 1
+let failure_toggle = 0
 
 // when called this fonction will be a promise as the previous code
 async function foo() {
@@ -29,6 +29,7 @@ foo().then(
     (result) => console.log(`error with ${result}`)
 ).then(
     function (result) {
+        console.log("dans le dernier then")
         console.log(result);
         return result * 3;
     }
