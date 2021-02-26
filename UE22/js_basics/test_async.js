@@ -9,9 +9,11 @@ async function foo() {
     // depending on successful or not
     if (failure_toggle) {
         // in case of failure, do not wait
+        console.log("failure_toggle === 1");
         throw 1; // Equivalent to reject(1);
     } else {
         // in case of success, wait for 1 s
+        console.log("failure_toggle === 0");
         return 1; // Equivalent to resolve(1);
     }
 }
