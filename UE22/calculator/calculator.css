@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+    color: white;
+}
 
 #container {
     display: grid;
@@ -8,6 +12,12 @@
         "four five sixx mult"
         "onee twoo thre minu"
         "zerr dott equa plus";
+
+    border: 1px solid orangered;
+    border-radius: 15px;
+
+    width: 200px;
+    height: 300px;
 }
 
 .display {
