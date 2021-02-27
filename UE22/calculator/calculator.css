@@ -30,6 +30,8 @@ body {
     align-items: center;
     padding-right: 5px;
     grid-area: disp;
+
+    border-bottom: 1px solid grey;
 }
 
 .bouton {
@@ -40,54 +42,67 @@ body {
 
 .key_C {
     grid-area: canc;
+    border-bottom: 1px solid grey;
 }
 
 .key_plus_minus {
     grid-area: plmn;
+    border-bottom: 1px solid grey;
 }
 
 .key_percent {
     grid-area: perc;
+    border-bottom: 1px solid grey;
 }
 
 .key_del {
     grid-area: dele;
+    border-bottom: 1px solid grey;
 }
 
 .key_1 {
     grid-area: onee;
+    border-bottom: 1px solid grey;
 }
 
 .key_2 {
     grid-area: twoo;
+    border-bottom: 1px solid grey;
 }
 
 .key_3 {
     grid-area: thre;
+    border-bottom: 1px solid grey;
 }
 
 .key_4 {
     grid-area: four;
+    border-bottom: 1px solid grey;
 }
 
 .key_5 {
     grid-area: five;
+    border-bottom: 1px solid grey;
 }
 
 .key_6 {
     grid-area: sixx;
+    border-bottom: 1px solid grey;
 }
 
 .key_7 {
     grid-area: seve;
+    border-bottom: 1px solid grey;
 }
 
 .key_8 {
     grid-area: eigh;
+    border-bottom: 1px solid grey;
 }
 
 .key_9 {
     grid-area: nine;
+    border-bottom: 1px solid grey;
 }
 
 .key_0 {
@@ -100,14 +115,17 @@ body {
 
 .key_divise {
     grid-area: divd;
+    border-bottom: 1px solid grey;
 }
 
 .key_multiply {
     grid-area: mult;
+    border-bottom: 1px solid grey;
 }
 
 .key_minus {
     grid-area: minu;
+    border-bottom: 1px solid grey;
 }
 
 .key_plus {
