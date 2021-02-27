@@ -32,6 +32,12 @@ body {
     grid-area: disp;
 }
 
+.bouton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .key_C {
     grid-area: canc;
 }
