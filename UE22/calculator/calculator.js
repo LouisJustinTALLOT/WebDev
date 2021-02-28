@@ -9,8 +9,10 @@ function update_display(string_to_display) {
     div_display.innerHTML = string_to_display;
 }
 
-function reset(){
+function reset() {
     expression = "";
+    is_displayed_main = "";
+    is_displayed_secondary = "";
     update_display("");
 }
 
