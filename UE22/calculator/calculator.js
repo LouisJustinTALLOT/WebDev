@@ -14,3 +14,8 @@ function reset(){
     update_display("");
 }
 
+function add_number(car_number) {
+    is_displayed_main += car_number;
+    update_display(is_displayed_main);
+}
+
