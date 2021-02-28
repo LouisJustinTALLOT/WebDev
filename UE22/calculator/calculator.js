@@ -26,3 +26,14 @@ function add_number(car_number) {
     update_display(is_displayed_main);
 }
 
+function add_dot() {
+    if (!is_displayed_main.includes('.')) {
+        if (is_displayed_main) {
+            is_displayed_main += '.'
+        } else {
+            is_displayed_main = "0."
+        }
+    }
+    update_display(is_displayed_main);
+}
+
