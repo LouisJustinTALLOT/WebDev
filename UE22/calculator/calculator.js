@@ -9,7 +9,7 @@ let operators_list = ['+', '-', '×', '/'];
 function trouver_dernier_nombre(str) {
     let res = "";
     let car_etudie;
-    for (let i = 1; i < str.length; i++) {
+    for (let i = 1; i <= str.length; i++) {
         if (i == 1) {
             car_etudie = str.slice(-1);
         } else {
