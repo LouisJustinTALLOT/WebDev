@@ -116,6 +116,29 @@ function add_operator(str_operator) {
     update_display_main(is_displayed_main);
     return;
 }
+/*
+function parse_expr(expr) {
+    let array_expr = [];
+    let nombre = "";
+
+    while (true) {
+        if (!expr) {
+            break;
+        }
+
+        if (operators_list.includes(expr.slice(-1))) {
+            array_expr = [expr.slice(-1)].concat(array_expr);
+            expr = expr.slice(0, -1);
+        } else {
+            nombre = trouver_dernier_nombre(expr);
+            array_expr = [nombre].concat(array_expr);
+            expr = expr.slice(0, -nombre.length);
+        }
+    }
+
+    return array_expr;
+}
+*/
 
 function evaluate_and_display() {
     // let res = evaluate(parse_expr(is_displayed_main))
