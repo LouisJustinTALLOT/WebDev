@@ -112,3 +112,11 @@ function add_operator(str_operator) {
     update_display(is_displayed_main);
     return;
 }
+
+function evaluate_and_display() {
+    // let res = evaluate(parse_expr(is_displayed_main))
+    let res = eval(is_displayed_main.replaceAll('×', '*'));
+    is_displayed_secondary = is_displayed_main;
+    is_displayed_main = res;
+    update_display(is_displayed_main);
+}
