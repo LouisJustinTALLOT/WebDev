@@ -27,11 +27,32 @@ function add_number(car_number) {
 }
 
 function add_dot() {
-    if (!is_displayed_main.includes('.')) {
-        if (is_displayed_main) {
-            is_displayed_main += '.'
+    let operators_list = ['+', '-', '×', '/'];
+    let plus_grande_tranche_que_des_chiffres = "";
+    let car_etudie;
+    for (let i = 1; i < is_displayed_main.length; i++) {
+        if (i == 1) {
+            car_etudie = is_displayed_main.slice(-1);
         } else {
-            is_displayed_main = "0."
+            car_etudie = is_displayed_main.slice(-i, -i + 1);
+        }
+        if (operators_list.includes(car_etudie)) {
+            break;
+        } else { 
+            plus_grande_tranche_que_des_chiffres = car_etudie + plus_grande_tranche_que_des_chiffres
+        }
+    }
+
+    if (!plus_grande_tranche_que_des_chiffres.includes('.')) {
+        if (is_displayed_main) {
+            if (['+', '-', '×', '/'].includes(is_displayed_main.slice(-1))) {
+                is_displayed_main += "0.";
+
+            } else {
+                is_displayed_main += '.';
+            }
+        } else {
+            is_displayed_main = "0.";
         }
     }
     update_display(is_displayed_main);
