@@ -25,6 +25,12 @@ function trouver_dernier_nombre(str) {
 }
 
 function update_display_main(string_to_display) {
+    let div_display = document.getElementById("display_main");
+    div_display.innerHTML = string_to_display;
+}
+
+function update_display_secondary(string_to_display) {
+    let div_display = document.getElementById("display_secondary");
     div_display.innerHTML = string_to_display;
 }
 
@@ -118,4 +124,5 @@ function evaluate_and_display() {
     is_displayed_secondary = is_displayed_main;
     is_displayed_main = res;
     update_display_main(is_displayed_main);
+    update_display_secondary(is_displayed_secondary);
 }

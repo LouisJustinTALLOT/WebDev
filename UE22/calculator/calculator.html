@@ -6,7 +6,10 @@
     </head>
     <body>
         <div id="container">
-            <div id="display"></div>
+            <div id="display">
+                <div id="display_secondary"></div>
+                <div id="display_main"></div>
+            </div>
 
             <div class="bouton key_C" onclick="reset()">C</div>
             <div class="bouton key_plus_minus">+/-</div>
@@ -29,7 +32,7 @@
 
             <div class="bouton key_dot" onclick="add_dot()">.</div>
 
-            <div class="bouton key_divise"   onclick="add_operator('/')">÷</div>
+            <div class="bouton key_divise" onclick="add_operator('/')">÷</div>
             <div class="bouton key_multiply" onclick="add_operator('×')">×</div>
             <div class="bouton key_minus"    onclick="add_operator('-')">-</div>
             <div class="bouton key_plus"     onclick="add_operator('+')">+</div>
