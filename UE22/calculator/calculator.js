@@ -37,3 +37,52 @@ function add_dot() {
     update_display(is_displayed_main);
 }
 
+function add_operator(str_operator) {
+    let operators_list = ['+', '-', '×', '/'];
+
+    if (is_displayed_main == '-') {
+        return;
+    }
+
+    if (!is_displayed_main) {
+        if (str_operator == '-') {
+            is_displayed_main += '-';
+        }
+        update_display(is_displayed_main);
+        return;
+    }
+
+    if (is_displayed_main.length >= 2 && operators_list.includes(is_displayed_main.slice(-1)) && operators_list.includes(is_displayed_main.slice(-2, -1))) {
+        console.log('ici');
+        return;
+    }
+
+    if (operators_list.includes(is_displayed_main.slice(-1))) {
+        if (is_displayed_main.slice(-1) == "+" || is_displayed_main.slice(-1) == '-') {
+            // on remplace 
+            is_displayed_main = is_displayed_main.slice(0, -1);
+            is_displayed_main += str_operator;
+            update_display(is_displayed_main);
+            return;
+        }
+        if (is_displayed_main.slice(-1) == '×' || is_displayed_main.slice(-1) == '/') {
+            // si c'est un moins on l'ajoute sinon on remplace
+            if (str_operator == '-') { //on ajoute
+                is_displayed_main += str_operator;
+                update_display(is_displayed_main);
+                return;
+            }
+            else {
+                // on remplace 
+                is_displayed_main = is_displayed_main.slice(0, -1);
+                is_displayed_main += str_operator;
+                update_display(is_displayed_main);
+                return;
+            }
+        }
+    }
+
+    is_displayed_main += str_operator;
+    update_display(is_displayed_main);
+    return;
+}
