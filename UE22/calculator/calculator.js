@@ -4,6 +4,8 @@ let expression = "";
 let is_displayed_main = "";
 let is_displayed_secondary = "";
 
+let operators_list = ['+', '-', '×', '/'];
+
 function update_display(string_to_display) {
     let div_display = document.getElementById("display");
     div_display.innerHTML = string_to_display;
@@ -27,7 +29,7 @@ function add_number(car_number) {
 }
 
 function add_dot() {
-    let operators_list = ['+', '-', '×', '/'];
+
     let plus_grande_tranche_que_des_chiffres = "";
     let car_etudie;
     for (let i = 1; i < is_displayed_main.length; i++) {
@@ -45,7 +47,7 @@ function add_dot() {
 
     if (!plus_grande_tranche_que_des_chiffres.includes('.')) {
         if (is_displayed_main) {
-            if (['+', '-', '×', '/'].includes(is_displayed_main.slice(-1))) {
+            if (operators_list.includes(is_displayed_main.slice(-1))) {
                 is_displayed_main += "0.";
 
             } else {
@@ -59,8 +61,6 @@ function add_dot() {
 }
 
 function add_operator(str_operator) {
-    let operators_list = ['+', '-', '×', '/'];
-
     if (is_displayed_main == '-') {
         return;
     }
