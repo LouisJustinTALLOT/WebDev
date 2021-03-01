@@ -117,6 +117,45 @@ function add_operator(str_operator) {
     return;
 }
 /*
+function evaluate(array_expr) {
+    let unit = "";
+    let only_numbers = true;
+
+    if (array_expr.length == 0) {
+        return 0;
+    }
+
+    for (unit of array_expr) {
+        if (operators_list.includes(unit)) {
+            only_numbers = false;
+            break;
+        }
+    }
+
+    if (only_numbers) {
+        return parseFloat(array_expr[0]);
+    }
+
+    for (var i = 0; i<array_expr.length; i++) {
+
+        if (array_expr[i] == '×') {
+            return evaluate(array_expr.slice(0, i)) * evaluate(array_expr.slice(i+1 ,))
+        }
+
+        if (array_expr[i] == '/') {
+            return evaluate(array_expr.slice(0, i)) / evaluate(array_expr.slice(i + 1,))
+        }
+        if (array_expr[i] == '+') {
+            return evaluate(array_expr.slice(0, i)) + evaluate(array_expr.slice(i+1 ,))
+        }
+        if (array_expr[i] == '-') {
+            return evaluate(array_expr.slice(0, i)) - evaluate(array_expr.slice(i+1 ,))
+        }
+
+    }
+}
+*/
+/*
 function parse_expr(expr) {
     let array_expr = [];
     let nombre = "";
