@@ -84,7 +84,6 @@ function add_operator(str_operator) {
     }
 
     if (is_displayed_main.length >= 2 && operators_list.includes(is_displayed_main.slice(-1)) && operators_list.includes(is_displayed_main.slice(-2, -1))) {
-        console.log('ici');
         return;
     }
 
